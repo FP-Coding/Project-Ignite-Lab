@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { Text, TextProps } from './Text'
+import { Heading, HeadingProps } from './Heading'
 
 export default {
-  title: 'Components/Text',
-  component: Text,
+  title: 'Components/Heading',
+  component: Heading,
   args: {
     children: 'Loren Ipsum',
     size: 'md',
@@ -13,12 +13,12 @@ export default {
       options: ['sm', 'md', 'lg'],
       control: {
         type: 'inline-radio',
-      },
+      }
     }
-  }
-} as Meta<TextProps>
+  },
+} as Meta<HeadingProps>
 
-export const Default: StoryObj<TextProps> = {
+export const Default: StoryObj<HeadingProps> = {
   argTypes: {
     asChild: {
       table: {
@@ -28,7 +28,7 @@ export const Default: StoryObj<TextProps> = {
   }
 };
 
-export const Small: StoryObj<TextProps> = {
+export const Small: StoryObj<HeadingProps> = {
   args: {
     size: 'sm'
   },
@@ -41,7 +41,7 @@ export const Small: StoryObj<TextProps> = {
   }
 };
 
-export const Large: StoryObj<TextProps> = {
+export const Large: StoryObj<HeadingProps> = {
   args: {
     size: 'lg'
   },
@@ -54,10 +54,10 @@ export const Large: StoryObj<TextProps> = {
   }
 };
 
-export const CustomComponent: StoryObj<TextProps> = {
+export const CustomComponent: StoryObj<HeadingProps> = {
   args: {
     asChild: true,
-    children: (<p>Testando</p>)
+    children: (<h1>Text with h1</h1>)
   },
   argTypes: {
     children: {
